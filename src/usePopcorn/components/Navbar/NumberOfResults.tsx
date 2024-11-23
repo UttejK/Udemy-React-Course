@@ -1,7 +1,9 @@
-export default function NumberOfResults() {
+import { TMovie } from "../../utils/types";
+
+export default function NumberOfResults({ movies }: { movies: TMovie[] }) {
   return (
     <p className="num-results">
-      Found <strong>X</strong> results
+      Found <strong>{movies.length}</strong> results
     </p>
   );
 }

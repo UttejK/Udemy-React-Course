@@ -1,11 +1,12 @@
-import ListOfMoviesPanel from "./ListOfMoviesPanel";
-import MoviesWatched from "./MoviesWatched";
+import { TMovie } from "../../utils/types";
+import ListOfMoviesPanel from "./ListOfMovies/ListOfMoviesPanel";
+import MoviesWatchedPanel from "./MoviesWatched/MoviesWatchedPanel";
 
-export default function Main() {
+export default function Main({ movies }: { movies: TMovie[] }) {
   return (
     <main className="main">
-      <ListOfMoviesPanel />
-      <MoviesWatched />
+      <ListOfMoviesPanel movies={movies} />
+      <MoviesWatchedPanel />
     </main>
   );
 }

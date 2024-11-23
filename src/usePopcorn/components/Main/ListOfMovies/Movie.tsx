@@ -1,4 +1,4 @@
-import { TMovie } from "../../utils/types";
+import { TMovie } from "../../../utils/types";
 
 export default function Movie({ movie }: { movie: TMovie }) {
   return (

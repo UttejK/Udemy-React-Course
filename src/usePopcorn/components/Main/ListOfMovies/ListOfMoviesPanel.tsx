@@ -1,7 +1,8 @@
 import { useState } from "react";
 import ListOfMovies from "./ListOfMovies";
+import { TMovie } from "../../../utils/types";
 
-export default function ListOfMoviesPanel() {
+export default function ListOfMoviesPanel({ movies }: { movies: TMovie[] }) {
   const [isOpen1, setIsOpen1] = useState(true);
 
   return (
@@ -12,7 +13,7 @@ export default function ListOfMoviesPanel() {
       >
         {isOpen1 ? "–" : "+"}
       </button>
-      {isOpen1 && <ListOfMovies />}
+      {isOpen1 && <ListOfMovies movies={movies} />}
     </div>
   );
 }
